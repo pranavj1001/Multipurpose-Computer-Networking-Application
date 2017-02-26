@@ -25,7 +25,9 @@ If /I "%INPUT%"=="y" goto cleanAlternative
 If /I "%INPUT%"=="n" goto yesDelete
 :clean
 echo System secure!
+goto end
 :cleanAlternative
 echo System not secure
+:end
 pause
 exit
