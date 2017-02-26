@@ -8,12 +8,13 @@ IF EXIST virusTest.txt goto infected
 IF NOT EXIST virusTest.txt goto clean
 :infected
 echo WARNING VIRUS DETECTED!
+:wrongInput
 echo Do you want to delete this virus?(Y,N)
 set INPUT=
 set /P INPUT=Type input: %=%
 If /I "%INPUT%"=="y" goto yesDelete
 If /I "%INPUT%"=="n" goto no
-echo Incorrect input & goto infected
+echo Incorrect input & goto wrongInput
 :yesDelete
 del virusTest.txt
 goto start
