@@ -16,7 +16,7 @@
       </JFXButton>
       <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="81.0" layoutY="63.0">
          <image>
-            <Image url="@images/backArrow.png" />
+            <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="267.0" layoutY="153.0" prefHeight="111.0" prefWidth="216.0" text="Trial">

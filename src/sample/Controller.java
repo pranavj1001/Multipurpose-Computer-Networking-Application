@@ -23,7 +23,7 @@ public class Controller {
 
     //Function to load AntiVirus
     @FXML private void loadAntiVirusWindow() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("antivirus.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/antivirus.fxml"));
         rootAnchorPane.getChildren().setAll(pane);
         FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
         ft.setFromValue(0.0);
@@ -33,7 +33,7 @@ public class Controller {
 
     //Function to load SSH
     @FXML private void loadSSHWindow() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("ssh.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/ssh.fxml"));
         rootAnchorPane.getChildren().setAll(pane);
         FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
         ft.setFromValue(0.0);
@@ -43,7 +43,7 @@ public class Controller {
 
     //Function to load VPN
     @FXML private void loadVPNWindow() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("vpn.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/vpn.fxml"));
         rootAnchorPane.getChildren().setAll(pane);
         FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
         ft.setFromValue(0.0);
@@ -53,7 +53,7 @@ public class Controller {
 
     //Function to load FTP
     @FXML private void loadFTPWindow() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("ftp.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/ftp.fxml"));
         rootAnchorPane.getChildren().setAll(pane);
         FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
         ft.setFromValue(0.0);
