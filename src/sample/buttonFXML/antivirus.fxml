@@ -20,10 +20,10 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="267.0" layoutY="153.0" prefHeight="111.0" prefWidth="216.0" text="Trial">
+      <JFXButton fx:id="antivirusTestButton" layoutX="296.0" layoutY="244.0" onAction="#runTheAntivirusCode" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" text="Protect My PC">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
-      </Label>
+      </JFXButton>
    </children>
 </AnchorPane>

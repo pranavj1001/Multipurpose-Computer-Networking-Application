@@ -71,4 +71,15 @@ public class Controller {
         ft.play();
     }
 
+    @FXML private void runTheAntivirusCode(){
+        try {
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\antivirus.bat"};
+            //to determine the Operating System
+            System.out.println(System.getProperty("os.name"));
+            Runtime.getRuntime().exec(command);
+        } catch (IOException e) {
+            System.out.println("Oh Snap!");
+        }
+    }
+
 }
