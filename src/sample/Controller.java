@@ -81,4 +81,13 @@ public class Controller {
         }
     }
 
+    @FXML private void runTheVPNCode(){
+        try {
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn.bat"};
+            Runtime.getRuntime().exec(command);
+        } catch (IOException e) {
+            System.out.println("Oh Snap!");
+        }
+    }
+
 }
