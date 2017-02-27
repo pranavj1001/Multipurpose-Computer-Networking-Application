@@ -15,22 +15,22 @@
 
 <AnchorPane fx:id="rootAnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <JFXButton fx:id="sshButton" buttonType="RAISED" layoutX="304.0" layoutY="134.0" onAction="#loadSSHWindow" prefHeight="149.0" prefWidth="158.0" text="SSH">
+      <JFXButton fx:id="sshButton" buttonType="RAISED" layoutX="304.0" layoutY="134.0" onAction="#loadSSHWindow" prefHeight="149.0" prefWidth="158.0" style="-fx-border-color: gray; -fx-border-width: 0.2px;" text="SSH">
          <font>
             <Font size="23.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="antivirusButton" buttonType="RAISED" layoutX="102.0" layoutY="134.0" onAction="#loadAntiVirusWindow" prefHeight="149.0" prefWidth="158.0" text="Antivirus" wrapText="true">
+      <JFXButton fx:id="antivirusButton" buttonType="RAISED" layoutX="102.0" layoutY="134.0" onAction="#loadAntiVirusWindow" prefHeight="149.0" prefWidth="158.0" style="-fx-border-color: gray; -fx-border-width: 0.2px;" text="Antivirus" wrapText="true">
          <font>
             <Font size="23.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="ftpButton" buttonType="RAISED" layoutX="503.0" layoutY="134.0" onAction="#loadFTPWindow" prefHeight="149.0" prefWidth="158.0" text="FTP">
+      <JFXButton fx:id="ftpButton" buttonType="RAISED" layoutX="503.0" layoutY="134.0" onAction="#loadFTPWindow" prefHeight="149.0" prefWidth="158.0" style="-fx-border-width: 0.2px; -fx-border-color: gray;" text="FTP">
          <font>
             <Font size="23.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="vpnButton" buttonType="RAISED" layoutX="102.0" layoutY="322.0" onAction="#loadVPNWindow" prefHeight="149.0" prefWidth="158.0" text="VPN">
+      <JFXButton fx:id="vpnButton" buttonType="RAISED" layoutX="102.0" layoutY="322.0" onAction="#loadVPNWindow" prefHeight="149.0" prefWidth="158.0" style="-fx-border-color: gray; -fx-border-width: 0.2px;" text="VPN">
          <font>
             <Font size="23.0" />
          </font>
@@ -45,13 +45,13 @@
       <Label alignment="CENTER" blendMode="DARKEN" layoutX="520.0" layoutY="225.0" prefHeight="11.0" prefWidth="120.0" text="Create a FTP server" wrapText="true" />
       <Label alignment="CENTER" blendMode="DARKEN" layoutX="107.0" layoutY="412.0" prefHeight="17.0" prefWidth="149.0" text="Protect your online identity" wrapText="true" />
       <Line disable="true" endX="105.0" layoutX="199.0" layoutY="107.0" opacity="0.5" startX="-100.0" strokeLineCap="BUTT" />
-      <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="322.0" prefHeight="149.0" prefWidth="158.0" text="ENC">
+      <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="322.0" prefHeight="149.0" prefWidth="158.0" style="-fx-border-width: 0.2px; -fx-border-color: gray;" text="ENC">
          <font>
             <Font size="23.0" />
          </font>
       </JFXButton>
       <Label alignment="CENTER" blendMode="DARKEN" layoutX="309.0" layoutY="412.0" prefHeight="17.0" prefWidth="149.0" text="Encrypt &amp; Decrypt" wrapText="true" />
-      <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="322.0" prefHeight="149.0" prefWidth="158.0" text="HPS">
+      <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="322.0" prefHeight="149.0" prefWidth="158.0" style="-fx-border-color: gray; -fx-border-width: 0.2px;" text="HPS">
          <font>
             <Font size="23.0" />
          </font>
