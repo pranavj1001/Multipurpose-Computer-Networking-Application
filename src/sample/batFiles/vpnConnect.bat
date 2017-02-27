@@ -27,12 +27,13 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
+
 title VPN
 echo VPN
-echo Copying Files
+echo Copying Files...
 copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\CanadaVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
-echo Starting VPN
+echo Starting VPN...
 rasdial "Canada VPN Connection" justfreevpn 9915
 pause
 exit

@@ -20,7 +20,12 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="vpnTestButton" layoutX="306.0" layoutY="254.0" onAction="#runTheVPNCode" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Connect to VPN">
+      <JFXButton fx:id="vpnTestButton" layoutX="195.0" layoutY="254.0" onAction="#runTheVPNCode" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Connect to VPN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="vpnDisconnectButton" alignment="CENTER" layoutX="405.0" layoutY="254.0" onAction="#disconnectTheVPNService" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Disconnect from VPN" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>

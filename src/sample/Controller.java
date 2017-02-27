@@ -21,6 +21,8 @@ public class Controller {
     @FXML private Button vpnButton;
     @FXML private Button backFromAntiVirus;
 
+    Boolean vpnIsOn = false;
+
     //Function to load AntiVirus
     @FXML private void loadAntiVirusWindow() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/antivirus.fxml"));
@@ -81,10 +83,23 @@ public class Controller {
         }
     }
 
+    //Function which connects to a VPN
     @FXML private void runTheVPNCode(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn.bat"};
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpnConnect.bat"};
             Runtime.getRuntime().exec(command);
+            vpnIsOn = true;
+        } catch (IOException e) {
+            System.out.println("Oh Snap!");
+        }
+    }
+
+    //Function which disconnects from a VPN
+    @FXML private void disconnectTheVPNService(){
+        try {
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpnDisconnect.bat"};
+            Runtime.getRuntime().exec(command);
+            vpnIsOn = false;
         } catch (IOException e) {
             System.out.println("Oh Snap!");
         }
