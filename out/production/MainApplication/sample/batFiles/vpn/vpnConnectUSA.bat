@@ -35,6 +35,6 @@ echo Copying Files...
 copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\USAVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
 echo Starting VPN...
-rasdial "USA VPN Connection" "justfreevpn" *
+rasdial "USA VPN Connection" justfreevpn *
 pause
 exit
