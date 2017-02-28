@@ -77,7 +77,9 @@ public class Controller {
     //Function which runs the code for AntiVirus
     @FXML private void runTheAntivirusCode(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\antivirus\\antivirus.bat"};
+            String workingDir = System.getProperty("user.dir");
+            //System.out.println(workingDir);
+            String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\antivirus\\antivirus.bat"};
             Runtime.getRuntime().exec(command);
         } catch (IOException e) {
             System.out.println("Oh Snap!");
