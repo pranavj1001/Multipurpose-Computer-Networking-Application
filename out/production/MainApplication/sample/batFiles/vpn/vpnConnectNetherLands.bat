@@ -30,10 +30,11 @@ if '%errorlevel%' NEQ '0' (
 
 title VPN
 echo VPN
+echo NetherLands Connection
 echo Copying Files...
 copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\NetherlandsVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
 echo Starting VPN...
-rasdial "Netherlands VPN Connection" justfreevpn 1053
+rasdial "Netherlands VPN Connection" justfreevpn *
 pause
 exit

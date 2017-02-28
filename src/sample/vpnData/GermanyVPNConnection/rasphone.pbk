@@ -3,4 +3,4 @@ MEDIA=rastapi
 Port=VPN2-0
 Device=WAN Miniport (IKEv2)
 DEVICE=vpn
-PhoneNumber=ca.justfreevpn.com
+PhoneNumber=de.justfreevpn.com

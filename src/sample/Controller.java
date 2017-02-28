@@ -91,28 +91,29 @@ public class Controller {
         try {
 
             String[] commandToRun = {};
+            String workingDir = System.getProperty("user.dir");
 
             System.out.println(((Button) actionEvent.getSource()).getText());
 
             if(((Button) actionEvent.getSource()).getText().equals("USA VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectUSA.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectUSA.bat"};
                 commandToRun = command;
                 System.out.println("Reached here");
             }else if(((Button) actionEvent.getSource()).getText().equals("UK VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectUK.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectUK.bat"};
                 commandToRun = command;
                 System.out.println("Reached here");
             }else if(((Button) actionEvent.getSource()).getText().equals("Canada VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectCanada.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectCanada.bat"};
                 commandToRun = command;
             }else if(((Button) actionEvent.getSource()).getText().equals("Germany VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectGermany.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectGermany.bat"};
                 commandToRun = command;
             }else if(((Button) actionEvent.getSource()).getText().equals("NetherLands VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectNetherLands.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectNetherLands.bat"};
                 commandToRun = command;
             }else if(((Button) actionEvent.getSource()).getText().equals("Hong Kong VPN")){
-                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectHongKong.bat"};
+                String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnConnectHongKong.bat"};
                 commandToRun = command;
             }
             if(commandToRun.length != 0)

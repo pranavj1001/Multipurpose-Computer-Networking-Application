@@ -29,11 +29,11 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 title VPN
-echo VPN
+echo UK Connection
 echo Copying Files...
 copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\UKVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
 echo Starting VPN...
-rasdial "UK VPN Connection" justfreevpn 2832
+rasdial "UK VPN Connection" justfreevpn *
 pause
 exit
