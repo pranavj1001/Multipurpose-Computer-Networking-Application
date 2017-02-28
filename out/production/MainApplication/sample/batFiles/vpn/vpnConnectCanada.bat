@@ -32,7 +32,7 @@ title VPN
 echo VPN
 echo Canada Connection
 echo Copying Files...
-copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\HongKongVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
+copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\CanadaVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
 echo Starting VPN...
 rasdial "Canada VPN Connection" justfreevpn *
