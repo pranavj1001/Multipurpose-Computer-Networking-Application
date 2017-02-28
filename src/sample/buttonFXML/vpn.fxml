@@ -20,12 +20,47 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="vpnTestButton" layoutX="195.0" layoutY="254.0" onAction="#runTheVPNCode" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Connect to VPN">
+      <JFXButton fx:id="vpnTestButton" layoutX="108.0" layoutY="208.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="USA VPN">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="vpnDisconnectButton" alignment="CENTER" layoutX="405.0" layoutY="254.0" onAction="#disconnectTheVPNService" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Disconnect from VPN" textAlignment="CENTER" wrapText="true">
+      <JFXButton fx:id="vpnDisconnectButton" alignment="CENTER" layoutX="509.0" layoutY="422.0" onAction="#disconnectTheVPNService" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Disconnect from VPN" textAlignment="CENTER" textFill="#9a2828" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="331.0" layoutY="51.0" prefHeight="58.0" prefWidth="89.0" text="VPN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="148.0" text="Connect to a VPN of the following countries">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="vpnTestButton1" layoutX="108.0" layoutY="263.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="UK VPN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="vpnTestButton2" layoutX="108.0" layoutY="318.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Canada VPN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="vpnTestButton3" layoutX="108.0" layoutY="374.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="NetherLands VPN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="vpnTestButton31" layoutX="108.0" layoutY="430.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Germany VPN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="vpnTestButton311" layoutX="108.0" layoutY="486.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Hong Kong VPN">
          <font>
             <Font size="18.0" />
          </font>
