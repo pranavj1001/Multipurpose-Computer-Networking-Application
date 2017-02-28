@@ -55,12 +55,12 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="vpnTestButton31" layoutX="108.0" layoutY="430.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Germany VPN">
+      <JFXButton fx:id="vpnTestButton4" layoutX="108.0" layoutY="430.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Germany VPN">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="vpnTestButton311" layoutX="108.0" layoutY="486.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Hong Kong VPN">
+      <JFXButton fx:id="vpnTestButton5" layoutX="108.0" layoutY="486.0" onAction="#runTheVPNCode" prefHeight="48.0" prefWidth="170.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Hong Kong VPN">
          <font>
             <Font size="18.0" />
          </font>

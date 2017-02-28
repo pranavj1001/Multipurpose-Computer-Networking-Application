@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -76,7 +77,7 @@ public class Controller {
     //Function which runs the code for AntiVirus
     @FXML private void runTheAntivirusCode(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\antivirus.bat"};
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\antivirus\\antivirus.bat"};
             Runtime.getRuntime().exec(command);
         } catch (IOException e) {
             System.out.println("Oh Snap!");
@@ -84,10 +85,36 @@ public class Controller {
     }
 
     //Function which connects to a VPN
-    @FXML private void runTheVPNCode(){
+    @FXML private void runTheVPNCode(ActionEvent actionEvent){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnect.bat"};
-            Runtime.getRuntime().exec(command);
+
+            String[] commandToRun = {};
+
+            System.out.println(((Button) actionEvent.getSource()).getText());
+
+            if(((Button) actionEvent.getSource()).getText() == "USA VPN"){
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectUSA.bat"};
+                commandToRun = command;
+                System.out.println("Reached here");
+            }else if(((Button) actionEvent.getSource()).getText() == "UK VPN"){
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectUK.bat"};
+                commandToRun = command;
+                System.out.println("Reached here");
+            }else if(((Button) actionEvent.getSource()).getText() == "Canada VPN"){
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectCanada.bat"};
+                commandToRun = command;
+            }else if(((Button) actionEvent.getSource()).getText() == "Germany VPN"){
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectGermany.bat"};
+                commandToRun = command;
+            }else if(((Button) actionEvent.getSource()).getText() == "NetherLands VPN"){
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectNetherLands.bat"};
+                commandToRun = command;
+            }else if(((Button) actionEvent.getSource()).getText() == "Hong Kong VPN") {
+                String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnectHongKong.bat"};
+                commandToRun = command;
+            }
+            if(commandToRun.length != 0)
+                Runtime.getRuntime().exec(commandToRun);
             vpnIsOn = true;
         } catch (IOException e) {
             System.out.println("Oh Snap!");

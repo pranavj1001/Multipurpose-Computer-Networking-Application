@@ -31,9 +31,9 @@ if '%errorlevel%' NEQ '0' (
 title VPN
 echo VPN
 echo Copying Files...
-copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\CanadaVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
+copy D:\PRANAV\Project\MainApplication\src\sample\vpnData\USAVPNConnection\rasphone.pbk C:\Windows\System32\ras\rasphone.pbk
 pause
 echo Starting VPN...
-rasdial "Canada VPN Connection" justfreevpn 1406
+rasdial "USA VPN Connection" justfreevpn 6378
 pause
 exit
