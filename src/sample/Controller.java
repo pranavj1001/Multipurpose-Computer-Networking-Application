@@ -86,7 +86,7 @@ public class Controller {
     //Function which connects to a VPN
     @FXML private void runTheVPNCode(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpnConnect.bat"};
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnConnect.bat"};
             Runtime.getRuntime().exec(command);
             vpnIsOn = true;
         } catch (IOException e) {
@@ -97,7 +97,7 @@ public class Controller {
     //Function which disconnects from a VPN
     @FXML private void disconnectTheVPNService(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpnDisconnect.bat"};
+            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnDisconnect.bat"};
             Runtime.getRuntime().exec(command);
             vpnIsOn = false;
         } catch (IOException e) {

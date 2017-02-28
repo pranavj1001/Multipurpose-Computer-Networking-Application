@@ -33,3 +33,6 @@ title VPN
 echo Disconnecting...
 
 rasdial /DISCONNECT
+
+pause
+exit
