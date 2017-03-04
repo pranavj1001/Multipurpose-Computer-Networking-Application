@@ -9,45 +9,46 @@
 
 <AnchorPane fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <JFXButton fx:id="backToENCDEC" buttonType="RAISED" layoutX="95.0" layoutY="60.0" onAction="#goBackToENCDEC" prefHeight="39.0" prefWidth="64.0" text="Back">
+      <JFXButton fx:id="backToENCDEC" buttonType="RAISED" layoutX="95.0" layoutY="26.0" onAction="#loadENCDECWindow" prefHeight="39.0" prefWidth="64.0" text="Back">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="81.0" layoutY="63.0">
+      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="81.0" layoutY="29.0">
          <image>
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <JFXTextArea fx:id="taENCText" labelFloat="true" layoutX="95.0" layoutY="163.0" prefHeight="172.0" prefWidth="564.0" promptText="Enter the text here">
+      <JFXTextArea fx:id="taENCText" labelFloat="true" layoutX="95.0" layoutY="129.0" prefHeight="107.0" prefWidth="564.0" promptText="Enter the text here">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextArea>
-      <Label layoutX="95.0" layoutY="107.0" prefHeight="32.0" prefWidth="422.0" text="Type the text below which you want to encrypt">
+      <Label layoutX="95.0" layoutY="73.0" prefHeight="32.0" prefWidth="422.0" text="Type the text below which you want to encrypt">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="95.0" layoutY="354.0" prefHeight="32.0" prefWidth="92.0" text="Type the key">
+      <Label layoutX="95.0" layoutY="266.0" prefHeight="32.0" prefWidth="92.0" text="Type the key">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="tfENCKey" layoutX="217.0" layoutY="358.0" prefHeight="25.0" prefWidth="444.0" promptText="Enter the text here">
+      <JFXTextField fx:id="tfENCKey" layoutX="217.0" layoutY="270.0" prefHeight="25.0" prefWidth="444.0" promptText="Enter the text here">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="encryptDataButton" layoutX="502.0" layoutY="435.0" onAction="#encryptData" prefHeight="79.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Encrypt" textAlignment="CENTER" wrapText="true">
+      <JFXButton fx:id="encryptDataButton" layoutX="502.0" layoutY="486.0" onAction="#encryptData" prefHeight="79.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Encrypt" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <Label fx:id="statusLabelENC" layoutX="95.0" layoutY="435.0" prefHeight="79.0" prefWidth="196.0">
+      <Label fx:id="statusLabelENC" layoutX="95.0" layoutY="488.0" prefHeight="79.0" prefWidth="196.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <JFXTextArea fx:id="taENCGText" editable="false" layoutX="95.0" layoutY="334.0" prefHeight="126.0" prefWidth="564.0" promptText="Encrypted text will appear here" />
    </children>
 </AnchorPane>

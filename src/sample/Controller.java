@@ -5,10 +5,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 import java.io.IOException;
+
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.PBEParameterSpec;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 public class Controller {
 
@@ -22,7 +35,21 @@ public class Controller {
     @FXML private Button vpnButton;
     @FXML private Button backFromAntiVirus;
 
+    //textArea variables
+    @FXML private TextArea taENCText;
+    @FXML private TextArea taENCGText;
+
+    //textField variables
+    @FXML private TextField tfENCKey;
+
+    //label variables
+    @FXML private Label statusLabelENC;
+
     Boolean vpnIsOn = false;
+
+    //Password related variables
+    private static final byte[] SALT = { (byte) 0xde, (byte) 0x33, (byte) 0x10, (byte) 0x12, (byte) 0xde, (byte) 0x33,
+            (byte) 0x10, (byte) 0x12, };
 
     //------Navigation---------//
 
@@ -89,16 +116,6 @@ public class Controller {
     //open Decrypt Window
     @FXML private void openDecryptWindow() throws IOException{
         AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/dec.fxml"));
-        rootAnchorPane.getChildren().setAll(pane);
-        FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
-        ft.setFromValue(0.0);
-        ft.setToValue(1.0);
-        ft.play();
-    }
-
-    //go back to ENCDEC Window
-    @FXML private void goBackToENCDEC() throws IOException{
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/encdec.fxml"));
         rootAnchorPane.getChildren().setAll(pane);
         FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
         ft.setFromValue(0.0);
@@ -190,7 +207,56 @@ public class Controller {
     //--------ENC & DEC----------//
 
     @FXML private void encryptData(){
-        
+
+        String data = "";
+        String key = "";
+        int goodToGoAhead = 1;
+
+        if(taENCText.getText().isEmpty()){
+            statusLabelENC.setText("Please Enter a text");
+            goodToGoAhead++;
+        }
+
+        if(tfENCKey.getText().isEmpty()){
+            statusLabelENC.setText("Please Enter a key");
+            goodToGoAhead++;
+        }
+
+        if(goodToGoAhead == 1){
+
+            statusLabelENC.setText("");
+
+            key = tfENCKey.getText();
+            char[] keyParamater = key.toCharArray();
+
+            data = taENCText.getText();
+            String encryptedData = null;
+            try {
+                encryptedData = encrypt(data, keyParamater);
+            } catch (GeneralSecurityException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            taENCGText.setText("Key: "+key+"\n"+"Encrypted Text: " + encryptedData);
+            statusLabelENC.setText("Encryption successful!");
+
+        }
+
+    }
+
+    private static String encrypt(String property, char[] key) throws GeneralSecurityException, UnsupportedEncodingException {
+        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
+        SecretKey secretKey = keyFactory.generateSecret(new PBEKeySpec(key));
+        Cipher pbeCipher = Cipher.getInstance("PBEWithMD5AndDES");
+        pbeCipher.init(Cipher.ENCRYPT_MODE, secretKey, new PBEParameterSpec(SALT, 20));
+        return base64Encode(pbeCipher.doFinal(property.getBytes("UTF-8")));
+    }
+
+    private static String base64Encode(byte[] bytes) {
+        // NB: This class is internal, and you probably should use another impl
+        return new BASE64Encoder().encode(bytes);
     }
 
     //!-------ENC & DEC---------!//
