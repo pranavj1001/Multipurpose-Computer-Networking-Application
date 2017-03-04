@@ -38,12 +38,16 @@ public class Controller {
     //textArea variables
     @FXML private TextArea taENCText;
     @FXML private TextArea taENCGText;
+    @FXML private TextArea taDECText;
+    @FXML private TextArea taDECGText;
 
     //textField variables
     @FXML private TextField tfENCKey;
+    @FXML private TextField tfDECKey;
 
     //label variables
     @FXML private Label statusLabelENC;
+    @FXML private Label statusLabelDEC;
 
     Boolean vpnIsOn = false;
 
@@ -213,7 +217,7 @@ public class Controller {
         int goodToGoAhead = 1;
 
         if(taENCText.getText().isEmpty()){
-            statusLabelENC.setText("Please Enter a text");
+            statusLabelENC.setText("Please Enter some text");
             goodToGoAhead++;
         }
 
@@ -255,8 +259,66 @@ public class Controller {
     }
 
     private static String base64Encode(byte[] bytes) {
-        // NB: This class is internal, and you probably should use another impl
         return new BASE64Encoder().encode(bytes);
+    }
+
+
+    @FXML private void decryptData(){
+
+        String data = "";
+        String key = "";
+        int goodToGoAhead = 1;
+
+        if(taDECText.getText().isEmpty()){
+            statusLabelDEC.setText("Please Enter some text");
+            goodToGoAhead++;
+        }
+
+        if(tfDECKey.getText().isEmpty()){
+            statusLabelDEC.setText("Please Enter a key");
+            goodToGoAhead++;
+        }
+
+        if(goodToGoAhead == 1){
+
+            statusLabelDEC.setText("");
+
+            key = tfDECKey.getText();
+            char[] keyParamater = key.toCharArray();
+
+            data = taDECText.getText();
+            String decryptedData = null;
+            try {
+                decryptedData = decrypt(data, keyParamater);
+            } catch (GeneralSecurityException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            taDECGText.setText("Key: "+key+"\n"+"Decrypted Text: " + decryptedData);
+            statusLabelDEC.setText("Decryption successful!");
+
+        }
+
+    }
+
+    private static String decrypt(String property, char[] key) throws GeneralSecurityException, IOException {
+        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
+        SecretKey secretKey = keyFactory.generateSecret(new PBEKeySpec(key));
+        Cipher pbeCipher = Cipher.getInstance("PBEWithMD5AndDES");
+        pbeCipher.init(Cipher.DECRYPT_MODE, secretKey, new PBEParameterSpec(SALT, 20));
+        try {
+            return new String(pbeCipher.doFinal(base64Decode(property)), "UTF-8");
+        }catch (Exception e){
+            return "Wrong Combination";
+        }
+    }
+
+    private static byte[] base64Decode(String property) throws IOException {
+        return new BASE64Decoder().decodeBuffer(property);
     }
 
     //!-------ENC & DEC---------!//
