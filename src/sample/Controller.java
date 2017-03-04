@@ -24,6 +24,8 @@ public class Controller {
 
     Boolean vpnIsOn = false;
 
+    //------Navigation---------//
+
     //Function to load AntiVirus
     @FXML private void loadAntiVirusWindow() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/antivirus.fxml"));
@@ -74,6 +76,10 @@ public class Controller {
         ft.play();
     }
 
+    //!------Navigation---------!//
+
+    //-------AntiVirus-----------//
+
     //Function which runs the code for AntiVirus
     @FXML private void runTheAntivirusCode(){
         try {
@@ -85,6 +91,10 @@ public class Controller {
             System.out.println("Oh Snap!");
         }
     }
+
+    //!-------AntiVirus---------!//
+
+    //--------VPN----------------//
 
     //Function which connects to a VPN
     @FXML private void runTheVPNCode(ActionEvent actionEvent){
@@ -134,5 +144,7 @@ public class Controller {
             System.out.println("Oh Snap!");
         }
     }
+
+    //!-------VPN---------------!//
 
 }
