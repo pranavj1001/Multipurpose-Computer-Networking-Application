@@ -19,6 +19,35 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <Label layoutX="151.0" layoutY="160.0" text="Encrypt" />
+      <JFXTextArea fx:id="taENCText" labelFloat="true" layoutX="95.0" layoutY="163.0" prefHeight="172.0" prefWidth="564.0" promptText="Click here to get started">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <Label layoutX="95.0" layoutY="107.0" prefHeight="32.0" prefWidth="422.0" text="Type the text below which you want to encrypt">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="354.0" prefHeight="32.0" prefWidth="92.0" text="Type the key">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tfENCKey" layoutX="217.0" layoutY="358.0" prefHeight="25.0" prefWidth="444.0" promptText="Click here to get started">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="encryptDataButton" layoutX="502.0" layoutY="435.0" onAction="#encryptData" prefHeight="79.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Encrypt" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="statusLabelENC" layoutX="95.0" layoutY="435.0" prefHeight="79.0" prefWidth="196.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

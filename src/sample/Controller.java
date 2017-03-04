@@ -189,7 +189,9 @@ public class Controller {
 
     //--------ENC & DEC----------//
 
-
+    @FXML private void encryptData(){
+        
+    }
 
     //!-------ENC & DEC---------!//
 

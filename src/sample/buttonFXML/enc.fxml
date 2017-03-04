@@ -19,7 +19,7 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <JFXTextArea fx:id="taENCText" labelFloat="true" layoutX="95.0" layoutY="148.0" prefHeight="172.0" prefWidth="564.0" promptText="Click here to get started">
+      <JFXTextArea fx:id="taENCText" labelFloat="true" layoutX="95.0" layoutY="163.0" prefHeight="172.0" prefWidth="564.0" promptText="Enter the text here">
          <font>
             <Font size="14.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="tfENCKey" layoutX="217.0" layoutY="358.0" prefHeight="25.0" prefWidth="444.0" promptText="Click here to get started">
+      <JFXTextField fx:id="tfENCKey" layoutX="217.0" layoutY="358.0" prefHeight="25.0" prefWidth="444.0" promptText="Enter the text here">
          <font>
             <Font size="14.0" />
          </font>
