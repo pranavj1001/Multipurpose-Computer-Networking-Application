@@ -45,7 +45,7 @@
       <Label alignment="CENTER" blendMode="DARKEN" layoutX="520.0" layoutY="225.0" prefHeight="11.0" prefWidth="120.0" text="Create a FTP server" wrapText="true" />
       <Label alignment="CENTER" blendMode="DARKEN" layoutX="107.0" layoutY="412.0" prefHeight="17.0" prefWidth="149.0" text="Protect your online identity" wrapText="true" />
       <Line disable="true" endX="105.0" layoutX="199.0" layoutY="107.0" opacity="0.5" startX="-100.0" strokeLineCap="BUTT" />
-      <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="322.0" prefHeight="149.0" prefWidth="158.0" style="-fx-border-width: 0.2px; -fx-border-color: gray;" text="ENC">
+      <JFXButton fx:id="encdecButton" buttonType="RAISED" layoutX="304.0" layoutY="322.0" onAction="#loadENCDECWindow" prefHeight="149.0" prefWidth="158.0" style="-fx-border-width: 0.2px; -fx-border-color: gray;" text="ENC">
          <font>
             <Font size="23.0" />
          </font>

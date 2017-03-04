@@ -66,6 +66,16 @@ public class Controller {
         ft.play();
     }
 
+    //Function to load Encryption and Decryption Window
+    @FXML private void loadENCDECWindow() throws IOException{
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("buttonFXML/encdec.fxml"));
+        rootAnchorPane.getChildren().setAll(pane);
+        FadeTransition ft = new FadeTransition(Duration.millis(300), rootAnchorPane);
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+        ft.play();
+    }
+
     //Function to go back to Root Page
     @FXML private void goBackToRoot() throws IOException{
         AnchorPane pane = FXMLLoader.load(getClass().getResource("rootScene.fxml"));
