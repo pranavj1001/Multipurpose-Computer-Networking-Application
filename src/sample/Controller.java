@@ -198,7 +198,8 @@ public class Controller {
     //Function which disconnects from a VPN
     @FXML private void disconnectTheVPNService(){
         try {
-            String[] command = {"cmd.exe", "/C", "Start", "D:\\PRANAV\\Project\\MainApplication\\src\\sample\\batFiles\\vpn\\vpnDisconnect.bat"};
+            String workingDir = System.getProperty("user.dir");
+            String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\vpn\\vpnDisconnect.bat"};
             Runtime.getRuntime().exec(command);
             vpnIsOn = false;
         } catch (IOException e) {
