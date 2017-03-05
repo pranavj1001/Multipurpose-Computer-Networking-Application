@@ -215,19 +215,19 @@ public class Controller {
 
         String data = "";
         String key = "";
-        int goodToGoAhead = 1;
+        boolean goodToGoAhead = true;
 
         if(taENCText.getText().isEmpty()){
             statusLabelENC.setText("Please Enter some text");
-            goodToGoAhead++;
+            goodToGoAhead = false;
         }
 
         if(tfENCKey.getText().isEmpty()){
             statusLabelENC.setText("Please Enter a key");
-            goodToGoAhead++;
+            goodToGoAhead = false;
         }
 
-        if(goodToGoAhead == 1){
+        if(goodToGoAhead){
 
             statusLabelENC.setText("");
 
@@ -268,19 +268,19 @@ public class Controller {
 
         String data = "";
         String key = "";
-        int goodToGoAhead = 1;
+        boolean goodToGoAhead = true;
 
         if(taDECText.getText().isEmpty()){
             statusLabelDEC.setText("Please Enter some text");
-            goodToGoAhead++;
+            goodToGoAhead = false;
         }
 
         if(tfDECKey.getText().isEmpty()){
             statusLabelDEC.setText("Please Enter a key");
-            goodToGoAhead++;
+            goodToGoAhead = false;
         }
 
-        if(goodToGoAhead == 1){
+        if(goodToGoAhead){
 
             statusLabelDEC.setText("");
 
@@ -300,7 +300,11 @@ public class Controller {
             }
 
             taDECGText.setText("Key: "+key+"\n"+"Decrypted Text: " + decryptedData);
-            statusLabelDEC.setText("Decryption successful!");
+            if(decryptedData.equals("(Wrong Combination - Please try again)")) {
+                statusLabelDEC.setText("Decryption Not Successful!");
+            }else{
+                statusLabelDEC.setText("Decryption Successful!");
+            }
 
         }
 
@@ -314,7 +318,7 @@ public class Controller {
         try {
             return new String(pbeCipher.doFinal(base64Decode(property)), "UTF-8");
         }catch (Exception e){
-            return "Wrong Combination";
+            return "(Wrong Combination - Please try again)";
         }
     }
 
