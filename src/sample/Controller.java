@@ -330,7 +330,19 @@ public class Controller {
 
     //--------SSH---------------//
 
+    @FXML private void runTheSSHCode(){
 
+        try {
+            String workingDir = System.getProperty("user.dir");
+            String[] command = {"cmd.exe", "/C", "Start", workingDir+"\\src\\sample\\batFiles\\ssh\\runPuTTY.bat"};
+            //to determine the Operating System
+            System.out.println(System.getProperty("os.name"));
+            Runtime.getRuntime().exec(command);
+        } catch (IOException e) {
+            System.out.println("Oh Snap!");
+        }
+
+    }
 
     //!-------SSH--------------!//
 

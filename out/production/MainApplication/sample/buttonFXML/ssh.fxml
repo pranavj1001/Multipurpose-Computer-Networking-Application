@@ -19,10 +19,10 @@
             <Image url="@../images/backArrow.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="267.0" layoutY="153.0" prefHeight="111.0" prefWidth="216.0" text="Trial">
+      <JFXButton fx:id="sshTestButton" layoutX="326.0" layoutY="274.0" onAction="#runTheSSHCode" prefHeight="112.0" prefWidth="159.0" ripplerFill="#7c4242" style="-fx-border-color: gray; -fx-border-width: 0.2px; -fx-border-radius: 10px;" text="Start a SSH Session" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
-      </Label>
+      </JFXButton>
    </children>
 </AnchorPane>
