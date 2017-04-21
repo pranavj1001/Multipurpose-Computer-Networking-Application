@@ -1,4 +1,5 @@
 @ECHO OFF
+title SSH
 ECHO ------------------------------------
 ECHO 	 SSH - Components App
 ECHO ------------------------------------

@@ -349,8 +349,13 @@ public class Controller {
     //--------FTP---------------//
 
     @FXML private void runTheFTPCode(){
-        String workingDir = System.getProperty("user.dir");
-
+        try {
+            String workingDir = System.getProperty("user.dir");
+            String[] command = {"cmd.exe", "/C", "Start", workingDir + "\\src\\sample\\batFiles\\ftp\\ftp.bat"};
+            Runtime.getRuntime().exec(command);
+        }catch (IOException e){
+            System.out.println("Oh Snap!");
+        }
     }
 
     //!-------FTP--------------!//
