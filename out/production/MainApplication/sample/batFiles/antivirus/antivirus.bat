@@ -1,7 +1,10 @@
-@echo off
+@ECHO OFF
 title Antivirus
-echo Antivirus
-echo created by the ApplicationName
+ECHO ------------------------------------
+ECHO 	 Antivirus - Components App
+ECHO ------------------------------------
+ECHO 	BY PRANAV and KEDAR
+ECHO -------------------------------------
 :start
 cd D:\PRANAV
 IF EXIST virusTest.txt goto infected
