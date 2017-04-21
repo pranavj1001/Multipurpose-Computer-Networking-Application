@@ -348,7 +348,10 @@ public class Controller {
 
     //--------FTP---------------//
 
+    @FXML private void runTheFTPCode(){
+        String workingDir = System.getProperty("user.dir");
 
+    }
 
     //!-------FTP--------------!//
 

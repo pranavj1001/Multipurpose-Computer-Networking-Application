@@ -13,8 +13,8 @@ set /P INPUT=Type input: %=%
 If /I "%INPUT%"=="y" goto yes
 If /I "%INPUT%"=="n" goto no
 :yes
-cd src\sample\PuTTY\
-putty.exe
+cd src\sample\FTP\bin
+java run
 :no
 PAUSE
 EXIT
